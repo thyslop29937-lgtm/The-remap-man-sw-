@@ -1,189 +1,473 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Remap Man SW | Vehicle Remapping Devon & Cornwall</title>
-<meta name="description" content="The Remap Man SW provides professional vehicle remapping across Devon & Cornwall including Paignton, Torquay, Brixham and Plymouth. Stage 1 & Stage 2 ECU remapping available.">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<style>
-body{
-margin:0;
-font-family:Poppins, sans-serif;
-background:#111;
-color:white;
-}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-header{
-background:#000;
-padding:20px;
-text-align:center;
-}
+  <title>The Remap Man SW | Vehicle Remapping Devon & Cornwall (Mobile Service)</title>
+  <meta name="description" content="The Remap Man SW provides professional vehicle remapping across Devon & Cornwall. Stage 1 & Stage 2 ECU remaps, diagnostics and solutions. Mobile service available. Call 07984559704 or WhatsApp." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://theremapmansw.co.uk/" />
 
-header h1{
-color:#e10600;
-margin:0;
-}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-nav{
-margin-top:10px;
-}
+  <!-- Local business schema (helps local SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutomotiveBusiness",
+    "name": "The Remap Man SW",
+    "url": "https://theremapmansw.co.uk/",
+    "telephone": "07984559704",
+    "areaServed": ["Devon", "Cornwall", "Torbay", "Paignton", "Torquay", "Brixham", "Newton Abbot", "Plymouth", "Exeter", "Truro", "St Austell"],
+    "sameAs": ["https://www.facebook.com/Theremapmansw/"],
+    "description": "Vehicle remapping across Devon & Cornwall. Stage 1 & Stage 2 ECU remaps with mobile service available."
+  }
+  </script>
 
-nav a{
-color:white;
-margin:0 15px;
-text-decoration:none;
-font-weight:600;
-}
-<a class="button" href="https://www.facebook.com/Theremapmansw/" target="_blank">Visit Our Facebook</a>
-.hero{
-padding:80px 20px;
-text-align:center;
-background:#1a1a1a;
-}
+  <style>
+    :root{
+      --bg:#0f0f0f;
+      --panel:#171717;
+      --panel2:#1f1f1f;
+      --text:#ffffff;
+      --muted:#cfcfcf;
+      --accent:#e10600;
+      --accent2:#ff1a1a;
+      --good:#25D366;
+    }
 
-.hero h2{
-font-size:40px;
-margin-bottom:20px;
-}
+    *{box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{
+      margin:0;
+      font-family:'Poppins',sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
 
-.button{
-display:inline-block;
-padding:15px 25px;
-background:#e10600;
-color:white;
-text-decoration:none;
-border-radius:30px;
-margin:10px;
-}
+    /* Header */
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:#000;
+      border-bottom:1px solid rgba(255,255,255,0.06);
+    }
+    .nav-wrap{
+      max-width:1100px;
+      margin:0 auto;
+      padding:14px 16px;
+      display:flex;
+      gap:14px;
+      align-items:center;
+      justify-content:space-between;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:200px;
+    }
+    .brand img{
+      height:44px;
+      width:auto;
+      display:block;
+    }
+    .brand .name{
+      font-weight:800;
+      letter-spacing:0.2px;
+    }
+    nav a{
+      color:var(--text);
+      text-decoration:none;
+      margin-left:16px;
+      font-weight:600;
+      font-size:14px;
+      opacity:0.92;
+    }
+    nav a:hover{color:var(--accent);opacity:1;}
 
-section{
-padding:60px 20px;
-max-width:1000px;
-margin:auto;
-}
+    /* Hero */
+    .hero{
+      background:
+        linear-gradient(rgba(0,0,0,0.72),rgba(0,0,0,0.72)),
+        radial-gradient(80% 60% at 50% 0%, rgba(225,6,0,0.25), transparent 60%),
+        url('hero.jpg');
+      background-size:cover;
+      background-position:center;
+      padding:78px 16px 64px;
+    }
+    .container{
+      max-width:1100px;
+      margin:0 auto;
+    }
+    .hero h1{
+      font-size:clamp(30px, 4vw, 50px);
+      line-height:1.15;
+      margin:0 0 14px;
+      font-weight:800;
+    }
+    .hero p{
+      margin:0 0 22px;
+      color:var(--muted);
+      max-width:740px;
+      font-size:clamp(15px, 2vw, 18px);
+    }
+    .pill-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin:18px 0 0;
+    }
+    .pill{
+      background:rgba(255,255,255,0.08);
+      border:1px solid rgba(255,255,255,0.10);
+      padding:8px 12px;
+      border-radius:999px;
+      font-size:13px;
+      color:#f3f3f3;
+    }
 
-.services{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
+    /* Buttons */
+    .btn-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;}
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:14px 18px;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:700;
+      border:1px solid transparent;
+      transition:transform .12s ease, background .12s ease, opacity .12s ease;
+      font-size:15px;
+    }
+    .btn:active{transform:scale(0.98);}
+    .btn-primary{background:var(--accent);color:#fff;}
+    .btn-primary:hover{background:var(--accent2);}
+    .btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,0.28);}
+    .btn-outline:hover{border-color:#fff;}
+    .btn-good{background:var(--good);color:#0b1d11;}
+    .btn-good:hover{opacity:0.92;}
 
-.card{
-background:#1c1c1c;
-padding:20px;
-border-radius:10px;
-}
+    /* Sections */
+    section{padding:62px 16px;}
+    h2{
+      margin:0 0 26px;
+      color:var(--accent);
+      text-align:center;
+      font-size:clamp(24px, 3vw, 34px);
+      font-weight:800;
+    }
+    .subtext{
+      text-align:center;
+      max-width:850px;
+      margin:0 auto 26px;
+      color:var(--muted);
+    }
 
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
+    /* Cards grid */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:16px;
+    }
+    .card{
+      background:var(--panel);
+      border:1px solid rgba(255,255,255,0.06);
+      border-radius:14px;
+      padding:18px;
+      transition:transform .12s ease;
+    }
+    .card:hover{transform:translateY(-3px);}
+    .card h3{
+      margin:0 0 8px;
+      font-size:18px;
+    }
+    .card p{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+    }
 
-.gallery img{
-width:100%;
-border-radius:10px;
-}
+    /* Gallery */
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:14px;
+      margin-top:10px;
+    }
+    .gallery .shot{
+      background:var(--panel2);
+      border:1px solid rgba(255,255,255,0.06);
+      border-radius:14px;
+      overflow:hidden;
+      min-height:170px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:rgba(255,255,255,0.55);
+      font-weight:600;
+      font-size:14px;
+    }
+    .gallery img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
 
-footer{
-background:#000;
-text-align:center;
-padding:20px;
-color:#aaa;
-}
-</style>
+    /* Map */
+    .map{
+      margin-top:18px;
+      border-radius:14px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,0.06);
+    }
+    .map iframe{
+      width:100%;
+      height:380px;
+      border:0;
+      display:block;
+    }
+
+    /* Contact */
+    .contact-box{
+      max-width:900px;
+      margin:0 auto;
+      background:var(--panel);
+      border:1px solid rgba(255,255,255,0.06);
+      border-radius:14px;
+      padding:22px;
+      text-align:center;
+    }
+    .contact-box .big{
+      font-size:22px;
+      font-weight:800;
+      margin:8px 0 2px;
+    }
+    .contact-box .small{
+      color:var(--muted);
+      margin:0 0 14px;
+    }
+
+    /* Footer */
+    footer{
+      padding:22px 16px;
+      background:#000;
+      border-top:1px solid rgba(255,255,255,0.06);
+      color:#aaa;
+      text-align:center;
+      font-size:13px;
+    }
+    footer a{color:#ddd;text-decoration:none;}
+    footer a:hover{color:var(--accent);}
+
+    /* Floating buttons */
+    .float-wrap{
+      position:fixed;
+      right:14px;
+      bottom:14px;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      z-index:2000;
+    }
+    .float{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:12px 14px;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:800;
+      font-size:14px;
+      box-shadow:0 10px 20px rgba(0,0,0,0.35);
+      border:1px solid rgba(255,255,255,0.08);
+    }
+    .float-call{background:var(--accent); color:#fff;}
+    .float-wa{background:var(--good); color:#0b1d11;}
+    .float small{font-weight:700; opacity:.85;}
+
+    /* Mobile nav tighten */
+    @media (max-width:640px){
+      nav{display:none;}
+      .brand .name{display:none;}
+      .hero{padding-top:64px;}
+    }
+  </style>
 </head>
+
 <body>
-<header>
-<h1>The Remap Man SW</h1>
-<nav>
-<a href="#services">Services</a>
-<a href="#gallery">Gallery</a>
-<a href="#areas">Areas</a>
-<a href="#contact">Contact</a>
-</nav>
-</header>
-<div class="hero">
-<h2>Vehicle Remapping Devon & Cornwall</h2>
-<p>Professional ECU remapping for performance, power and efficiency.</p>
-</div>
-<section id="services">
-<h2>Our Services</h2>
-<div class="services">
-<div class="card">
-<h3>Stage 1 Remap</h3>
-<p>Safe performance upgrade increasing power and torque.</p>
-</div>
-<div class="card">
-<h3>Stage 2 Remap</h3>
-<p>Performance tuning for modified vehicles.</p>
-</div>
-<div class="card">
-<h3>DPF & EGR Solutions</h3>
-<p>Professional diagnostic and DPF solutions.</p>
-</div>
-<div class="card">
-<h3>Fault Code Removal</h3>
-<p>Clear engine warning lights and ECU faults.</p>
-</div>
-</div>
-</section>
-<section id="gallery">
-<h2>Recent Remap Jobs</h2>
-<div class="gallery">
-<img src="https://via.placeholder.com/400x250">
-<img src="https://via.placeholder.com/400x250">
-<img src="https://via.placeholder.com/400x250">
-</div>
-</section>
-<section id="areas">
-<h2>Areas We Cover</h2>
-<p>
-The Remap Man SW provides vehicle remapping across Devon & Cornwall including:
-</p>
-<ul>
-<li>Paignton</li>
-<li>Torquay</li>
-<li>Brixham</li>
-<li>Newton Abbot</li>
-<li>Plymouth</li>
-<li>Exeter</li>
-<li>Truro</li>
-<li>St Austell</li>
-</ul>
-</section>
-  <section id="reviews">
-  <h2>Customer Reviews</h2>
-  <div class="services">
+  <header>
+    <div class="nav-wrap">
+      <div class="brand">
+        <!-- Put your logo in the repo as: logo.jpg (or change the filename here) -->
+        <img src="logo.jpg" alt="The Remap Man SW logo">
+        <div class="name">The Remap Man SW</div>
+      </div>
 
-    <div class="card">
-      <h3>⭐⭐⭐⭐⭐</h3>
-      <p>"Brilliant service from The Remap Man SW. My car feels much stronger and smoother to drive. Highly recommended."</p>
-      <p><strong>– Customer, Devon</strong></p>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#areas">Areas</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
+  </header>
 
-    <div class="card">
-      <h3>⭐⭐⭐⭐⭐</h3>
-      <p>"Turned up on time, explained everything clearly and the mobile service was ideal. Great result."</p>
-      <p><strong>– Customer, Cornwall</strong></p>
-    </div>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Vehicle Remapping Across Devon &amp; Cornwall</h1>
+        <p>
+          Professional ECU remapping for performance, torque and driveability.
+          Mobile service available across Devon &amp; Cornwall — call or WhatsApp to book.
+        </p>
 
-    <div class="card">
-      <h3>⭐⭐⭐⭐⭐</h3>
-      <p>"Very professional and easy to deal with. Noticeable improvement straight away after the remap."</p>
-      <p><strong>– Customer, Torbay</strong></p>
-    </div>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="tel:07984559704">Call 07984559704</a>
+          <a class="btn btn-good" href="https://wa.me/447984559704" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn btn-outline" href="https://www.facebook.com/Theremapmansw/" target="_blank" rel="noopener">View Facebook</a>
+        </div>
 
+        <div class="pill-row" aria-label="Highlights">
+          <div class="pill">Mobile Service</div>
+          <div class="pill">Stage 1 &amp; Stage 2</div>
+          <div class="pill">Devon &amp; Cornwall</div>
+          <div class="pill">Fast Response</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <h2>Services</h2>
+        <p class="subtext">
+          Safe, tailored tuning to suit your vehicle. If you’re not sure what you need, message on WhatsApp and we’ll advise.
+        </p>
+
+        <div class="grid">
+          <div class="card">
+            <h3>Stage 1 Remap</h3>
+            <p>Reliable power and torque increase with improved throttle response.</p>
+          </div>
+          <div class="card">
+            <h3>Stage 2 Remap</h3>
+            <p>For modified vehicles with supporting hardware upgrades.</p>
+          </div>
+          <div class="card">
+            <h3>Economy / Driveability</h3>
+            <p>Optimised mapping aimed at smoother delivery and improved MPG where possible.</p>
+          </div>
+          <div class="card">
+            <h3>Diagnostics</h3>
+            <p>Fault finding and guidance before tuning, so your vehicle stays reliable.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews">
+      <div class="container">
+        <h2>Customer Reviews</h2>
+        <p class="subtext">Swap these for your real reviews any time — even a few reviews helps conversions massively.</p>
+
+        <div class="grid">
+          <div class="card">
+            <h3>⭐⭐⭐⭐⭐</h3>
+            <p>“Brilliant service. Noticed the difference straight away — pulls much harder and drives smoother.”</p>
+            <p style="margin-top:10px;color:#fff;"><strong>— Customer, Devon</strong></p>
+          </div>
+
+          <div class="card">
+            <h3>⭐⭐⭐⭐⭐</h3>
+            <p>“Mobile service was ideal. Turned up on time, explained everything, great result.”</p>
+            <p style="margin-top:10px;color:#fff;"><strong>— Customer, Cornwall</strong></p>
+          </div>
+
+          <div class="card">
+            <h3>⭐⭐⭐⭐⭐</h3>
+            <p>“Professional, friendly and the car feels transformed. Would 100% recommend.”</p>
+            <p style="margin-top:10px;color:#fff;"><strong>— Customer, Torbay</strong></p>
+          </div>
+        </div>
+
+        <div class="btn-row" style="justify-content:center;margin-top:18px;">
+          <a class="btn btn-outline" href="https://www.facebook.com/Theremapmansw/" target="_blank" rel="noopener">See More on Facebook</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="container">
+        <h2>Gallery</h2>
+        <p class="subtext">
+          Add your real job photos here (best for trust). Upload images to your GitHub repo and replace the placeholders below.
+        </p>
+
+        <div class="gallery">
+          <!-- Replace these with your own images in the repo, e.g. car1.jpg, car2.jpg... -->
+          <div class="shot">Add photo: car1.jpg</div>
+          <div class="shot">Add photo: car2.jpg</div>
+          <div class="shot">Add photo: car3.jpg</div>
+          <div class="shot">Add photo: tools.jpg</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="areas">
+      <div class="container">
+        <h2>Areas We Cover</h2>
+        <p class="subtext">
+          Vehicle remapping across Devon &amp; Cornwall including Torbay, Paignton, Torquay, Brixham, Newton Abbot, Exeter, Plymouth, Truro and surrounding areas.
+        </p>
+
+        <div class="grid">
+          <div class="card"><h3>Devon</h3><p>Torbay • Paignton • Torquay • Brixham • Newton Abbot • Exeter • Plymouth</p></div>
+          <div class="card"><h3>Cornwall</h3><p>Truro • St Austell • Bodmin • Newquay and surrounding areas</p></div>
+          <div class="card"><h3>Mobile Service</h3><p>We come to you where possible — message on WhatsApp to check availability.</p></div>
+        </div>
+
+        <div class="map" aria-label="Map showing Devon and Cornwall">
+          <iframe src="https://www.google.com/maps?q=Devon%20and%20Cornwall&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <div class="contact-box">
+          <div class="big">Call: <a href="tel:07984559704" style="color:#fff;text-decoration:none;">07984559704</a></div>
+          <p class="small">Fast response on WhatsApp for quotes and bookings.</p>
+          <div class="btn-row" style="justify-content:center;">
+            <a class="btn btn-primary" href="tel:07984559704">Call Now</a>
+            <a class="btn btn-good" href="https://wa.me/447984559704" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn btn-outline" href="https://www.facebook.com/Theremapmansw/" target="_blank" rel="noopener">Facebook</a>
+          </div>
+          <p class="small" style="margin-top:14px;">Serving Devon &amp; Cornwall • The Remap Man SW</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 The Remap Man SW •
+    <a href="https://www.facebook.com/Theremapmansw/" target="_blank" rel="noopener">Facebook</a>
+  </footer>
+
+  <!-- Floating quick actions -->
+  <div class="float-wrap" aria-label="Quick contact buttons">
+    <a class="float float-wa" href="https://wa.me/447984559704" target="_blank" rel="noopener">WhatsApp <small>Quote</small></a>
+    <a class="float float-call" href="tel:07984559704">Call <small>Now</small></a>
   </div>
-</section>
-<section id="contact">
-<h2>Contact The Remap Man SW</h2>
-<p><strong>Phone:</strong> 07984559704</p>
-<p>Mobile vehicle remapping service across Devon & Cornwall.</p>
-</section>
-<footer>
-<p>© 2026 The Remap Man SW</p>
-</footer>
 </body>
 </html>
